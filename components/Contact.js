@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import Dropdown from './Dropdown';
 
 function Contact() {
-  const options = ['Basic', 'Standard', 'Premium'];
+  const options = ['Basic', 'Premium', 'AMV'];
   const [formData, setFormData] = useState({
+    firstname: '',
+    lastname: '',
     email: '',
     link: '',
     option: '',
-    message: ''
+    message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
@@ -35,7 +37,7 @@ function Contact() {
 
       if (response.ok) {
         setSubmitMessage('Message sent successfully!');
-        setFormData({ email: '', link: '', option: '', message: '' });
+        setFormData({firstname: '', lastname: '', email: '', link: '', option: '', message: '' });
       } else {
         const data = await response.json();
         setSubmitMessage(data.message || 'Failed to send message. Please try again.');
@@ -51,11 +53,33 @@ function Contact() {
     <div className="flex flex-col md:flex-row gap-8 mt-[12rem] mb-[9rem]">
       <div className="flex flex-col gap-3">
         <p className="text-[2.5rem] font-semibold w-[28rem] text-white ">Let's work together to make something awesome</p>
-        <p className="text-[15px] font-regular w-[21rem] text-white ">Change Editor Word Wrap from off to bounded his does exactly what I was wanting in the first place.</p>
+        <p className="text-[15px] font-regular w-[25rem] text-white text-justify	">  Need a captivating lyric video or a mesmerizing visual for your album? Let's collaborate to bring your vision to life and create something extraordinary..</p>
       </div>
-
+ 
       <div className="md:ml-[6rem]">
         <form onSubmit={handleSubmit} method="post" className="flex flex-col gap-8 ">
+          <div className="flex flex-ro gap-11">
+            <input 
+              type="text" 
+              name="firstname"
+              value={formData.firstname}
+              onChange={handleInputChange}
+              placeholder="First Name" 
+              className="w-[15.5rem] px-4 py-2 bg-transparent border-b-[1px] border-white text-white placeholder-white placeholder-white::placeholder focus:outline-none focus:border-yellow-300 transition-all duration-300"
+              required
+            />
+
+            <input 
+              type="text" 
+              name="lastname"
+              value={formData.lastname}
+              onChange={handleInputChange}
+              placeholder="Last Name" 
+              className="w-[15.5rem] px-4 py-2 bg-transparent border-b-[1px] border-white text-white placeholder-white placeholder-white::placeholder focus:outline-none focus:border-yellow-300 transition-all duration-300"
+              required
+            />
+          </div>
+
           <input 
             type="email" 
             name="email"
@@ -71,7 +95,7 @@ function Contact() {
               name="link"
               value={formData.link}
               onChange={handleInputChange}
-              placeholder="Link" 
+              placeholder="Instagram Handle" 
               className="w-[15.5rem] px-4 py-2 bg-transparent border-b-[1px] border-white text-white placeholder-white placeholder-white::placeholder focus:outline-none  transition-all duration-300"
             />
             <Dropdown options={options} placeholder="Select an option" onSelect={handleOptionSelect} />

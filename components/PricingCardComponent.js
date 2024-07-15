@@ -14,11 +14,11 @@ const PricingCard = ({
     <div className={`w-[22rem] h-[33rem] hover:translate-y-[-7px] transition ease-in-out  rounded-xl shadow-inner ${classIsON ? "bg-gradient-to-br from-[#f0ecfc] to-[#c797eb]" : "bg-white" }`}>
       <div className="pt-11 pl-7">
         <div className="flex flex-col gap-1">
-           <div className="flex flex-row gap-3">
+           <div className="flex flex-row gap-1">
              <p className="text-xl font-regular">{title}</p>
              {classIsON && 
 
-             <div className="w-[7.5rem] h-[1.7rem] bg-yellow-200 text-[15px] items-center rounded-lg justify-center pl-3 pt-[1.6px] mt-[1px]">
+             <div className="w-[5.8rem] h-[1.7rem] bg-yellow-200 text-[12px] items-center rounded-lg justify-center pl-[8px] pt-[5px] mt-[1px]">
                 <p className="">
                     Most Popular
                 </p>

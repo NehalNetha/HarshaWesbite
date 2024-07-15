@@ -43,8 +43,8 @@ function PriceArticle({onCtaClick}) {
             priceUnit="Video"
             features={[
                 { 
-                title: "4k Video",
-                description: "4k rendered video"
+                title: "4K Video",
+                description: "4K rendered video"
                 },
                 {
                 title: "Text Animations",
@@ -60,14 +60,14 @@ function PriceArticle({onCtaClick}) {
             onCtaClick = {onCtaClick}
             />
             <PricingCard
-            title="Animated Video"
+            title="Animated Music Video"
             description="High quality lyrical vidoes with more features and better animations, "
             price={150}
             priceUnit="Video"
             features={[
                 { 
                 title: "Animated Music Video",
-                description: "4k rendered video"
+                description: "4K rendered video"
                 },
                 {
                 title: "Text Animations",

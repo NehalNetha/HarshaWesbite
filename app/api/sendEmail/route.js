@@ -7,7 +7,7 @@ export async function GET() {
 }
 
 export async function POST(request) {
-  const { email, link, option, message } = await request.json();
+  const {firstname, lastname, email, link, option, message } = await request.json();
 
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -25,7 +25,9 @@ export async function POST(request) {
       to: "Lyricvideo.submissions@gmail.com",
       subject: "New Contact Form Submission",
       text: `Email: ${email}\nLink: ${link}\nOption: ${option}\nMessage: ${message}`,
-      html: `<p><strong>Email:</strong> ${email}</p>
+      html: `<p><strong>Firstname:</strong> ${firstname}</p>
+             <p><strong>Lastname:</strong> ${lastname}</p>
+             <p><strong>Email:</strong> ${email}</p>
              <p><strong>Link:</strong> ${link}</p>
              <p><strong>Option:</strong> ${option}</p>
              <p><strong>Message:</strong> ${message}</p>`
