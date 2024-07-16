@@ -79,7 +79,7 @@ function Contact() {
               onChange={handleInputChange}
               placeholder="First Name" 
               className="w-full md:w-1/2 px-4 py-2 bg-transparent border-b border-white text-white placeholder-white focus:outline-none focus:border-yellow-300 transition-all duration-300"
-              required
+              
             />
             <input 
               type="text" 
@@ -88,7 +88,7 @@ function Contact() {
               onChange={handleInputChange}
               placeholder="Last Name" 
               className="w-full md:w-1/2 px-4 py-2 bg-transparent border-b border-white text-white placeholder-white focus:outline-none focus:border-yellow-300 transition-all duration-300"
-              required
+              
             />
           </div>
 
@@ -114,13 +114,13 @@ function Contact() {
               <Dropdown options={options} placeholder="Select an option" onSelect={handleOptionSelect} />
             </div>
           </div>
-          <textarea
+          <input
             name="message"
             value={formData.message}
             onChange={handleInputChange}
             placeholder="Your message" 
-            className="w-full px-4 py-2 bg-transparent border-b border-white text-white placeholder-white focus:outline-none focus:border-white focus:ring-0 resize-none min-h-[100px]"
-            required
+            className="w-full px-4 py-2  bg-transparent border-b border-white text-white placeholder-white focus:outline-none focus:border-white focus:ring-0 resize-none min-h-[50px]"
+            
           />
           <button 
             type="submit" 
