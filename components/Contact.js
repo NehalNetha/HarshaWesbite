@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Dropdown from './Dropdown';
+import Image from 'next/image';
 
 function Contact() {
   const options = ['Basic', 'Premium', 'AMV'];
@@ -50,10 +51,39 @@ function Contact() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row gap-8 mt-[12rem] mb-[9rem]">
+    <div className="flex flex-col md:flex-row gap-9 mt-[12rem] mb-[9rem]">
       <div className="flex flex-col gap-3">
-        <p className="text-[2.5rem] font-semibold w-[28rem] text-white ">Let's work together to make something awesome</p>
-        <p className="text-[15px] font-regular w-[25rem] text-white text-justify	">  Need a captivating lyric video or a mesmerizing visual for your album? Let's collaborate to bring your vision to life and create something extraordinary..</p>
+        <p className="text-[2.5rem] font-semibold w-[28rem] text-white ">Let's work together to make something awesome!</p>
+        <p className="text-[15px] font-regular w-[25rem] text-white text-justify	">  Need a captivating lyric video or a mesmerizing visual for your album? Let's collaborate to bring your vision to life and create something extraordinary...</p>
+
+        <div className="flex flex-row ml-[4rem] mt-5 gap-6">
+            <a href="https://www.instagram.com/lyricvideomakers/" target="_blank">
+              <img 
+                  src = "/Instagram_logo_2016.png"
+                  className = "w-[3rem] h-[3rem]"
+
+              />
+            </a>
+
+            <a href="https://on.soundcloud.com/FR8hvnNAfdKVPt8U6" target="_blank" >
+              <img 
+                  src = "/soundcloud.svg"
+                  className = "w-[3.5rem] h-[3.5rem] "
+
+              />
+            </a>
+
+            <a href="https://open.spotify.com/user/nuiorn8mlf6kaq5p4eflc4iwt?si=FnarDsmiQN2dBtq2ltlZlw" target="_blank" >
+              <img 
+                  src = "/Spotify_icon.svg.png"
+                  className = "w-[3rem] h-[3rem] "
+
+              />
+            </a>
+
+            
+        </div>
+
       </div>
  
       <div className="md:ml-[6rem]">

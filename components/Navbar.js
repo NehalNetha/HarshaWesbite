@@ -12,11 +12,13 @@ function Navbar({  onCtaClick}) {
               height = {100}
             />
         </div>
-        <div className="transition-all duration-300 hover:translate-y-[-4px]">
-          <button className="text-md font-regular cursor-pointer  " onClick={onCtaClick}  >
-           <p className="decoration-solid">Contact Us</p> 
-            </button> 
-        </div>
+            <div className="transition-all duration-300 hover:translate-y-[-4px]">
+              <button className="text-md font-regular cursor-pointer  " onClick={onCtaClick}  >
+              <p className="decoration-solid">Contact Us</p> 
+                </button> 
+            </div>
+
+           
       </nav>
     )
   }

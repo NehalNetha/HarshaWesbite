@@ -19,7 +19,7 @@ function PriceArticle({onCtaClick}) {
             features={[
                 { 
                 title: "1080p Video",
-                description: "high quality rendered video"
+                description: "High quality rendered video"
                 },
                 {
                 title: "Basic Text Animations",
@@ -38,7 +38,7 @@ function PriceArticle({onCtaClick}) {
 
             <PricingCard
             title="Premium Video"
-            description="High quality lyrical vidoes with more features and better animations, "
+            description="High quality lyrical vidoes with more features and better animations"
             price={60}
             priceUnit="Video"
             features={[
@@ -48,11 +48,11 @@ function PriceArticle({onCtaClick}) {
                 },
                 {
                 title: "Text Animations",
-                description: "smooth and better text animations"
+                description: "Smooth and better text animations"
                 },
                 {
                 title: "Images/Video backgrounds",
-                description: "customisable video backgrounds"
+                description: "Customisable video backgrounds"
                 }
             ]}
             ctaText="Get Started"
@@ -61,7 +61,7 @@ function PriceArticle({onCtaClick}) {
             />
             <PricingCard
             title="Animated Music Video"
-            description="High quality lyrical vidoes with more features and better animations, "
+            description="High quality lyrical vidoes with more features and better animations"
             price={150}
             priceUnit="Video"
             features={[
@@ -71,11 +71,11 @@ function PriceArticle({onCtaClick}) {
                 },
                 {
                 title: "Text Animations",
-                description: "smooth and better text animations"
+                description: "Smooth and better text animations"
                 },
                 {
                 title: "Images/Video backgrounds",
-                description: "customisable video backgrounds"
+                description: "Customisable video backgrounds"
                 }
             ]}
             ctaText="Get Started"

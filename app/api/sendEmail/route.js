@@ -7,22 +7,22 @@ export async function GET() {
 }
 
 export async function POST(request) {
-  const {firstname, lastname, email, link, option, message } = await request.json();
+  const { firstname, lastname, email, link, option, message } = await request.json();
 
   let transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
+    host: process.env.EMAIL_HOST,
     port: parseInt(process.env.EMAIL_PORT || '587'),
     secure: false,
     auth: {
-      user: "lyricvideomakersdummy@gmail.com",
-      pass: "nuzs etdu baeb odaw",
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
   });
 
   try {
     let info = await transporter.sendMail({
-      from: `"Your Website" <${"lyricvideomakersdummy@gmail.com"}>`,
-      to: "Lyricvideo.submissions@gmail.com",
+      from: `"Your Website" <${process.env.EMAIL_USER}>`,
+      to: process.env.EMAIL_RECEIVER,
       subject: "New Contact Form Submission",
       text: `Email: ${email}\nLink: ${link}\nOption: ${option}\nMessage: ${message}`,
       html: `<p><strong>Firstname:</strong> ${firstname}</p>
