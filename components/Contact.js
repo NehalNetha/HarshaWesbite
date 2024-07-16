@@ -38,6 +38,7 @@ function Contact() {
 
       if (response.ok) {
         setSubmitMessage('Message sent successfully!');
+        console.log(formData)
         setFormData({firstname: '', lastname: '', email: '', link: '', option: '', message: '' });
       } else {
         const data = await response.json();
@@ -111,7 +112,7 @@ function Contact() {
               className="w-full md:w-1/2 px-4 py-2 bg-transparent border-b border-white text-white placeholder-white focus:outline-none transition-all duration-300"
             />
             <div className="w-full md:w-1/2">
-              <Dropdown options={options} placeholder="Select an option" onSelect={handleOptionSelect} />
+              <Dropdown options={options} placeholder="Select an option" onSelect={handleOptionSelect}   selectedOption={formData.option} />
             </div>
           </div>
           <input

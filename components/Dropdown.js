@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-export default function Dropdown({ options, placeholder }) {
+export default function Dropdown({ options, placeholder, onSelect, selectedOption }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
+
+  useEffect(() => {
+    if (selectedOption) {
+      setIsOpen(false);
+    }
+  }, [selectedOption]);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   const handleOptionClick = (option) => {
-    setSelectedOption(option);
+    onSelect(option);
     setIsOpen(false);
   };
 
@@ -49,5 +54,4 @@ export default function Dropdown({ options, placeholder }) {
       )}
     </div>
   );
-};
-
+}
