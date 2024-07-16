@@ -47,7 +47,7 @@ export default function MainArticle() {
                         transform: translateX(0px) translateY(0px) rotate(0deg);
                     }
                     50% {
-                        transform: translateX(50px) translateY(-200px) rotate(20deg);
+                        transform: translateX(50px) translateY(-150px) rotate(8deg);
                     }
                     100% {
                         transform: translateX(0px) translateY(0px) rotate(0deg);
@@ -102,8 +102,8 @@ export default function MainArticle() {
                 </div>
                 <div className="absolute right-[30rem] bottom-[50%] md:right-[50%] md:bottom-[5%] float-middle">
                     <Image src="/BlendGroup3.svg" width={300} height={200} alt="Blend Group 3" />
-                </div>
-                <div className="absolute right-[20rem] bottom-[20%] md:right-[5%] md:bottom-[2%] float-rightest">
+                </div> 
+                 <div className="absolute right-[20rem] bottom-[20%] md:right-[5%] md:bottom-[2%] float-rightest">
                     <Image src="/BlendGroup4.svg" width={300} height={200} alt="Blend Group 3" />
                 </div>
             </div>
