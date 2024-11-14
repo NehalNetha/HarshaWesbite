@@ -16,6 +16,9 @@ export default function Home() {
         <br />
         <a href="/api/download?file=exp_4_DNS_DHCP.pkt" download>
           Download exp 4 DNS DHCP
+        </a> 
+        <a href="/api/download?file=crc.py" download>
+          Download exp 4 DNS DHCP
         </a>
       </div>
     );
