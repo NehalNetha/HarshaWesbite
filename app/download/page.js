@@ -17,8 +17,15 @@ export default function Home() {
         <a href="/api/download?file=exp_4_DNS_DHCP.pkt" download>
           Download exp 4 DNS DHCP
         </a> 
+        <br />
+
         <a href="/api/download?file=crc.py" download>
-          Download exp 4 DNS DHCP
+          Crc python
+        </a>
+        <br />
+
+        <a href="/api/download?file=Two_Routers_Wireless.pkt" download>
+          Wireless Two Router
         </a>
       </div>
     );
