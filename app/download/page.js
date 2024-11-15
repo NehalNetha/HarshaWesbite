@@ -27,6 +27,16 @@ export default function Home() {
         <a href="/api/download?file=Two_Routers_Wireless.pkt" download>
           Wireless Two Router
         </a>
+        <br />
+
+        <a href="/api/download?file=leakybucket.py" download>
+          Leaky Buket
+        </a>
+        <br />
+
+        <a href="/api/download?file=goback.py" download>
+          gobackarq
+        </a>
       </div>
     );
   }

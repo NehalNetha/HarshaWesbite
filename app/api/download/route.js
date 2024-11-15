@@ -6,7 +6,7 @@ export async function GET(req) {
   const { searchParams } = new URL(req.url);
   const fileName = searchParams.get('file');
 
-  const validFiles = ['3_routers_New.pkt', '2_Routers_Final.pkt', '2-LAN.pkt', 'exp_4_DNS_DHCP.pkt', "Two_Routers_Wireless.pkt", "crc.py"];
+  const validFiles = ['3_routers_New.pkt', '2_Routers_Final.pkt', '2-LAN.pkt', 'exp_4_DNS_DHCP.pkt', "Two_Routers_Wireless.pkt", "crc.py","leakyBucket.py", "goback.py"];
   
   if (!validFiles.includes(fileName)) {
     return NextResponse.json({ error: 'Invalid file requested' }, { status: 400 });
